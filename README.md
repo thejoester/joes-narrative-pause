@@ -41,10 +41,6 @@ All settings are world-scope (set by the GM).
 - **Also pause the game** (default off): also toggle Foundry's built-in pause when Narrative Mode toggles.
 - **Debug logging** (default none): console logging verbosity.
 
-## How it works
-
-Movement is blocked in the `preMoveToken` pipeline: while Narrative Mode is on, a non-GM token move is cancelled on that player's own client. State is held in a hidden world setting, broadcast over the module socket when the GM toggles, and restored on load, so late-joiners and refreshes stay in sync.
-
 ## Compatibility
 
-FoundryVTT v14 (verified), v13 (minimum). No build step, plain ES modules.
+FoundryVTT v14 (verified), v13 (minimum).
