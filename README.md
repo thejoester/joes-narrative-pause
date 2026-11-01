@@ -13,6 +13,14 @@ A FoundryVTT module that gives the GM a "narrative mode" to freeze player token 
 
 Narrative Mode is an independent state, not Foundry's built-in pause (which does not actually stop token movement). An optional setting can additionally drive the real pause.
 
+## Installation
+
+In Foundry's **Add-on Modules** tab, choose **Install Module** and paste this manifest URL:
+
+```
+https://github.com/thejoester/joes-narrative-pause/releases/latest/download/module.json
+```
+
 ## Toggling it
 
 - **Keybind:** default **Shift+Space** (GM only, rebindable in Configure Controls).
