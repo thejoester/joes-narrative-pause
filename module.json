@@ -17,11 +17,7 @@
     ],
     "esmodules": [
         "scripts/logger.js",
-        "scripts/localization.js",
-        "scripts/settings.js",
-        "scripts/narrative.js",
         "scripts/ui.js",
-        "scripts/movement.js",
         "scripts/main.js"
     ],
     "styles": [

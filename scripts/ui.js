@@ -5,7 +5,7 @@
 	(tint color, text, duration) are set inline here.
 ======================================================================= */
 
-import { getSetting } from "./settings.js";
+import { getSetting } from "./logger.js";
 
 const FLASH_ID = "jnp-flash";
 const BANNER_ID = "jnp-banner";

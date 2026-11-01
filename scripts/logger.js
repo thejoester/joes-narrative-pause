@@ -1,5 +1,11 @@
 export const MOD_ID = "joes-narrative-pause";
 
+/*	Read a setting with a safe fallback if it is not registered yet. */
+export function getSetting(key, fallback = undefined) {
+	try { return game.settings.get(MOD_ID, key); }
+	catch { return fallback; }
+}
+
 /*	=======================================================================
 	Styled console logger
 	DL("msg")        => info
