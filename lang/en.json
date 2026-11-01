@@ -1,0 +1,39 @@
+{
+	"joes-narrative-pause": {
+		"title": "Joe's Narrative Pause",
+		"controls": {
+			"toolTitle": "Toggle Narrative Mode"
+		},
+		"keybind": {
+			"toggleName": "Toggle Narrative Mode",
+			"toggleHint": "GM only. Freezes player token movement and shows the narrative banner."
+		},
+		"notify": {
+			"gmOnly": "Only the GM can toggle Narrative Mode."
+		},
+		"settings": {
+			"borderEnabledName": "Show the border glow",
+			"borderEnabledHint": "When on, a pulsing border glow is shown while Narrative Mode is active.",
+			"tintColorName": "Border glow color",
+			"tintColorHint": "Color of the pulsing border glow shown while Narrative Mode is active. Default red.",
+			"bannerTextName": "Banner text",
+			"bannerTextHint": "Text of the banner shown at the top-center while Narrative Mode is on.",
+			"blockMessageName": "Blocked-move message",
+			"blockMessageHint": "Message a player sees when they try to move a token during Narrative Mode.",
+			"toastDurationName": "Message duration (seconds)",
+			"toastDurationHint": "How long the blocked-move message stays on screen before it fades.",
+			"showBannerToPlayersName": "Show banner to players",
+			"showBannerToPlayersHint": "When on, players also see the top-center Narrative Mode banner.",
+			"tintAllClientsName": "Flash border on all screens",
+			"tintAllClientsHint": "When on, the border flash shows for everyone. When off, only the GM sees it.",
+			"alsoPauseGameName": "Also pause the game",
+			"alsoPauseGameHint": "When on, toggling Narrative Mode also toggles Foundry's built-in pause.",
+			"debugLevelName": "Debug logging",
+			"debugLevelHint": "Console logging verbosity for this module.",
+			"debugLevelNone": "None",
+			"debugLevelError": "Errors",
+			"debugLevelWarn": "Warnings",
+			"debugLevelAll": "All"
+		}
+	}
+}

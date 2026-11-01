@@ -1,0 +1,79 @@
+/*	Joe's Narrative Pause, on-screen visuals.
+	Dynamic values (tint color, banner text, toast duration) are set inline
+	from ui.js; this file holds structure and keyframes. */
+
+/*	Border glow: full-viewport inset glow that stays up while narrative mode is
+	on, pulsing its opacity. box-shadow color is set inline per the tintColor
+	setting. */
+#jnp-flash {
+	position: fixed;
+	inset: 0;
+	z-index: 999000;
+	pointer-events: none;
+	animation: jnpFlash 2.4s ease-in-out infinite;
+}
+
+@keyframes jnpFlash {
+	0%, 100% { opacity: 0.35; }
+	50%      { opacity: 1; }
+}
+
+/*	Persistent top-center banner while narrative mode is on. */
+#jnp-banner {
+	position: fixed;
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999001;
+	pointer-events: none;
+	padding: 6px 20px;
+	border-radius: 12px;
+	border: 2px solid #d4af37;
+	background: rgba(0, 0, 0, 0.72);
+	color: #fff;
+	font-size: 48px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	animation: jnpBannerPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes jnpBannerPulse {
+	0%, 100% { opacity: 0.85; }
+	50%      { opacity: 1; }
+}
+
+/*	Player block toast, top third of the screen. Fades in then out across
+	--jnp-toast-dur (set inline from the toastDuration setting). */
+#jnp-toast {
+	position: fixed;
+	top: 22%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999002;
+	pointer-events: none;
+	max-width: 60vw;
+	padding: 16px 28px;
+	border-radius: 10px;
+	border: 2px solid #d4af37;
+	background: rgba(0, 0, 0, 0.82);
+	color: #fff;
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+	opacity: 0;
+}
+
+#jnp-toast.jnp-toast-show {
+	animation: jnpToast var(--jnp-toast-dur, 5s) ease-out forwards;
+}
+
+@keyframes jnpToast {
+	0%   { opacity: 0; }
+	8%   { opacity: 1; }
+	80%  { opacity: 1; }
+	100% { opacity: 0; }
+}
